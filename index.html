@@ -13,6 +13,25 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <header class="nav-header">JS Documentation</header>
+        <ul class="navitems">
+            <li class="navlist"><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li class="navlist"><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+            <li class="navlist"><a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a></li>
+            <li class="navlist"><a href="#Hello_world" class="nav-link">Hello world</a></li>
+            <li class="navlist"><a href="#Variables" class="nav-link">Variables</a></li>
+            <li class="navlist"><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+            <li class="navlist"><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+            <li class="navlist"><a href="#Global_variables" class="nav-link">Global variables</a></li>
+            <li class="navlist"><a href="#Constants" class="nav-link">Constants</a></li>
+            <li class="navlist"><a href="#Data_types" class="nav-link">Data types</a></li>
+            <li class="navlist"><a href="#if...else statement" class="nav-link">if...else statement</a></li>
+            <li class="navlist"><a href="#while_statement" class="nav-link">while statement</a></li>
+            <li class="navlist"><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
+            <li class="navlist"><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
     <main id="main-doc">
         <section class="main-section">
             <header class="title" id="Introduction">Introduction</header>
@@ -141,16 +160,16 @@ greetMe("World");
             <p class="paragraph">
                 JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.
             </p>
-            <p class="coding">
+            <code class="code">
                 if (true) { var x = 5; } console.log(x); // 5
-            </p>
+            </code>
             <p class="paragraph">
                 This behavior changes, when using the let declaration introduced in ECMAScript 2015.
             </p>
-            <p class="coding">
+            <code class="code">
                 if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
                 defined
-            </p>
+            </code>
         </section>
         <section class="main-section">
             <header class="title" id="Global_variables">Global variables</header>
@@ -168,7 +187,7 @@ greetMe("World");
             </p>
             <code class="code">
                 const PI = 3.14;
-            </p>
+            </code>
             <p class="paragraph">
                 A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
             </p>
@@ -181,13 +200,13 @@ greetMe("World");
             <code class="code">
                 // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
                 CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements}
-            </p>
+            </code>
             <p class="paragraph">
                 However, object attributes are not protected, so the following statement is executed without problems.
             </p>
             <code class="code">
                 const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
-            </p>
+            </code>
         </section>
         <section class="main-section">
             <header class="title" id="Data_types">Data types</header>
@@ -334,6 +353,7 @@ greetMe("World");
             </ul>
         </section>
     </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
